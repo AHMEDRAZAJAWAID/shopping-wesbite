@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(slider5.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 50px;
+}
+.logo img{
+    width: 150px;
+    height: auto;
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 5px;
+    margin: 0 22px;
+    border-bottom: 2px solid transparent;
+    transition: all .42s;
+}
+.navlist a:hover{
+    color: #D3D3D3;
+    border-bottom: 2px solid #fff;
+} 
+#menu-icon{
+    color: #fff;
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    display: none;
+}
+.home-btn {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #ce1b41;
+    background-color: #ce1b41;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all .42s;
+}
+.home-btn:hover{
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+section{
+    padding: 0 10%;
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+}
+.home-text h4{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.home-text h1{
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.home-text p{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    max-width: 460px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+.home-text span{
+    font-weight: bold
+}
+.home-inp{
+    width: 100%;
+    position: relative;
+}
+.home-inp input:first-child{
+    display: inline-block;
+    width: 35%;
+    outline: none;
+    padding: 16px 140px 16px 15px;
+    border: 2px solid #ce1b41;
+    border-radius: 30px;
+}
+.home-inp input:last-child{
+    position: absolute;
+    display: inline-block;
+    border: none;
+    background-color: #152f5d;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 16px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    top: 1px;
+    right: 610px;
+.right{
+    position: fixed;
+    top: 70%;
+    right: -150px;
+    padding: 0 5%;
+    transform: rotate(90deg);
+}
+.right a{
+    color: #fff;
+    margin: 0 15px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all .42s;
+    position: fixed;
+}
+.right a:hover{
+    color: #ce1b41;
+}
+/* responsiv class */
+@media screen and(max-width:995px){
+    header{
+        padding: 18px 20px;
+        transition: .3s;
+    }
+}
+@media screen and(max-width:685px){
+    .home-text h4{
+        font-size: 16px;
+        transition: .3s;
+    }
+    .home-text h1{
+        font-size: 40px;
+        transition: .3s;
+    }
+    .home-text p{
+        font-size: 14px;
+        transition: .3s;
+    }
+}
+@media screen and(max-width:425px){
+    .home-text h1{
+        font-size: 35px;
+        transition: .3s;
+    }  
+}
+@media screen and(max-width:580px){
+    .right{
+        right: -120px;
+        transition: .3s;
+        top: 50%;
+    }   
+}
+@media screen and(max-width:925px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: -600px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background-color: #152f5d;
+        transition: all .42s;
+    }
+    .navlist a{
+        display: inline-block;
+        padding: 16px;
+        margin: 8px;
+    }
+    .navlist.open{
+        top: 100%;
+    }
+}
+@media screen and(max-width:825px) {
+    .home-btn{
+        background-color: #152f5d;
+        border: 2px solid #152f5d;
+    }
+}
